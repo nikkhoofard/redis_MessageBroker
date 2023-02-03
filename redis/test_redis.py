@@ -5,6 +5,11 @@ client = Redis()
 
 
 def import_users_data(count):
+    """
+    create data in redis data base
+    :param count:
+    :return:
+    """
     for i in range(count):
         client.set(f" key:{i}", random.randint(1, 10))
 
